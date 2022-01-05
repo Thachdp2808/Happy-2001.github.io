@@ -24,7 +24,7 @@ html{
     
 }
 #header {
-    
+    max-width: 100%;
     height: 46px;
     background-color: black;
     position: fixed;
@@ -50,6 +50,7 @@ html{
 #nav >li {
     display: inline-block;
 }
+
 #nav li{
     list-style: none;
     position: relative;
@@ -80,6 +81,7 @@ html{
     color: white;
     font-size: 12px;
 }
+
 #icon-search{
     float: right;
     color: white;
@@ -87,17 +89,21 @@ html{
     padding: 0 24px;
     cursor: pointer;
 }
-#nav #icon-search:hover {
+
+#icon-search:hover {
     background-color: red;
 }
 #nav:hover .icon-down{
     color: black;
 }
+#icon-menu{
+    display: none;
+}
 #slider {
     
     margin-top: 46px;
     padding-top: 50% ;
-    background: url('/assets/img/chicago.jpg') top center / cover no-repeat;
+    
     position: relative;
 }
 
@@ -120,7 +126,8 @@ html{
 }
 #content {
     text-align: center;
-    width:800px ;
+    width:700px ;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 16px;
@@ -151,8 +158,11 @@ html{
     display: block;
     overflow: hidden;
 }
+#content #img-content{
+    display: flex;
+}
 #content #img-content .member-item{
-    float: left;
+    
     width: 33.333%;
     padding: 47px 0;
     
@@ -172,6 +182,7 @@ html{
 }
 #booking #main-booking{
     width: 800px;
+    max-width: 91.5%;
     margin-right: auto;
     margin-left: auto;
     padding: 64px 16px;
@@ -207,12 +218,13 @@ html{
     padding: 0px 8px;
 }
 #img-tickets{
-   
+   display: flex;
     margin: 32px -8px 0 -8px;
+    width: 102%;
 }
 .tickets1{
-    float: left;
-    width: 31.3333%;
+    
+    width: 33.3333%;
     padding: 0 8px;
 }
 .tickets1 img{
@@ -252,6 +264,7 @@ html{
     margin-left: auto;
     margin-right: auto;
     width: 800px;
+    max-width: 91.5%;
     padding: 64px 16px;
 }
 .contact-main{
@@ -421,4 +434,80 @@ input{
 }
 #footer .text-footer a{
     color: black;
+}
+#nav >li:nth-child(6){
+    display: none;
+}
+/* tablet */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    
+}
+
+/* Mobile */
+@media only screen and (max-width: 46.1875em) {
+    
+    .tickets1 {
+        padding: 8px;
+        width: 100%;
+    }
+    #img-tickets{
+        flex-direction: column;
+        width: 100%;
+    }
+    .contact-main{
+        flex-direction: column;
+    }
+    .contact-main .call{
+        width: 100%;
+    }
+    #content #img-content{
+        flex-direction: column;
+    }
+    #content #img-content .member-item{
+        width: 100%;
+        padding: 0;
+    }
+    #slider #text-content{
+        display: none;
+    }
+    #nav >li {
+        display: block;
+    }
+    #nav >li:first-child{
+        display: inline-block;
+    }
+    #nav >li:nth-child(5){
+        display: none;
+    }
+    #nav >li:nth-child(6){
+        display: inherit;
+    }
+    #nav{
+        display: block;
+    }
+    #header{
+        overflow: hidden;
+    }
+    #icon-search{
+        display: none;
+    }
+    #icon-menu{
+        display: block;
+        float: right;
+    color: white;
+    line-height: 46px;
+    padding: 0 24px;
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    right: 0;
+    }
+    #icon-menu:hover{
+        background-color: #ccc;
+        color: black;
+    }
+    .send-contact input{
+        height: 45px;
+    }
+    
 }

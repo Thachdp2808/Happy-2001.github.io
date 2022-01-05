@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title >HAPPY-2001</title>
-    <link rel="icon" href="./assets/img/Ava.jpeg">
+    <link rel="icon" href="./Ava.jpeg">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/themify-icons/themify-icons.css">
 </head>
@@ -14,26 +14,30 @@
         <div id="header">
             <ul id="nav">
                 <li><a href="">HOME</a></li>
-                <li><a href="">BAND</a></li>
-                <li><a href="">TOUR</a></li>
-                <li><a href="">CONTACT</a></li>
-                <li>
-                    <a href="">MORE
+                <li><a href="#content">BAND</a></li>
+                <li><a href="#booking">TOUR</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li >
+                    <a href="#">MORE
                         <i class="icon-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
+                <li><a href="#slider" >MERCH</a></li>
             </ul>
             <div id="icon-search">
                 <i class="icon-ti-search ti-search"></i>
             </div>
+            <div id="icon-menu">
+                <i class="ti-menu"></i>
+            </div>
         </div>
 
-        <div id="slider">
+        <div id="slider" style="background: url(./chicago.jpg) top center / cover no-repeat;">
             <div id="text-content">
                 <h2>Chicago</h2>
                 <p>Thank you, Chicago - A night we won't forget</p>
@@ -51,15 +55,15 @@
             <div id="img-content">
                <div class="member-item">
                    <p>Name</p>
-                   <img src="/assets/img/bandmember.jpg" alt="">
+                   <img src="./bandmember.jpg" alt="">
                </div>
                <div class="member-item">
                     <p>Name</p>
-                    <img src="/assets/img/bandmember.jpg" alt="">
+                    <img src="./bandmember.jpg" alt="">
                </div>
                <div class="member-item">
                     <p>Name</p>
-                    <img src="/assets/img/bandmember.jpg" alt="">
+                    <img src="./bandmember.jpg" alt="">
                </div>
             </div>
         </div>
@@ -78,7 +82,7 @@
                 </div>
                 <div id="img-tickets">
                     <div class="tickets1">
-                        <img src="/assets/img/newyork.jpg" alt="">
+                        <img src="./newyork.jpg" alt="">
                         <div class="text-img">
                             <p class="first-text">New York</p>
                             <p class="second-text">Fri 27 Nov 2016</p>
@@ -87,7 +91,7 @@
                         </div>
                     </div>
                     <div class="tickets1">
-                        <img src="/assets/img/paris.jpg" alt="">
+                        <img src="./paris.jpg" alt="">
                         <div class="text-img">
                             <p class="first-text">Paris</p>
                             <p class="second-text">Sat 28 Nov 2016</p>
@@ -96,7 +100,7 @@
                         </div>
                     </div>
                     <div class="tickets1">
-                        <img src="/assets/img/sanfran.jpg" alt="">
+                        <img src="./sanfran.jpg" alt="">
                         <div class="text-img">
                             <p class="first-text">San Francisco</p>
                             <p class="second-text">Sun 29 Nov 2016</p>
@@ -116,10 +120,10 @@
             <div class="contact-main">
                 <div class="call">
                     <p><i class="ti-location-pin">  Chicago, US</i></p>
-                    <p><i class="ti-mobile">  Phone: +00 151515</i></p>
-                    <p><i class="ti-email">  Email: mail@mail.com</i></p>
+                    <p><i class="ti-mobile">  Phone: <a href="tel:+84359113593">0359113593</a></i></p>
+                    <p><i class="ti-email">  Email: <a href="mailto:thachdp2808@gmail.com">thachdp2808@gmail.com</a></i></p>
                 </div>
-                <div class="input-contac">
+                <div class="input-contact">
                     <form action="">
                         <div class="row">
                             <div class="half">
@@ -174,7 +178,7 @@
             </div>
         </div>
         <div class="map-section">
-            <img src="./assets/img/map.jpg" alt="Map">
+            <img src="./map.jpg" alt="Map">
         </div>
         <div id="footer">
             <div id="icon-social">
@@ -189,25 +193,29 @@
         </div>
 
     </div>
-    <script>
-        const buyBTNs =document.querySelectorAll('.js-buy-ticket')
-        const modal = document.querySelector('.js-modal')
-        const close= document.querySelector('.js-close')
-        const modal_box= document.querySelector('.modal-box')
-        function showBuyticket(){
-            modal.classList.add('open')
+   <script src="./assets/css/Script/mycode.js"></script>
+   <script>
+       var header = document.getElementById('header');
+       var mobileMenu = document.getElementById('icon-menu');
+        var headerclient = header.clientHeight;
+        mobileMenu.onclick = function(){
+            var isClose = header.clientHeight === headerclient;
+            if(isClose){
+                header.style.height = 'auto'
+            }else{
+                header.style.height = '46px'
+            }
         }
-        function hideBuyticket(){
-            modal.classList.remove('open')
+
+        //Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for(i=0;i<menuItems.length;i++){
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function(){
+                header.style.height = '46px';
+            }
         }
-        for(const buyBTN of buyBTNs){
-            buyBTN.addEventListener('click', showBuyticket)
-        }
-        close.addEventListener('click',hideBuyticket)
-        modal.addEventListener('click',hideBuyticket)
-        modal_box.addEventListener('click',function(even){
-            even.stopPropagation()
-        })
-    </script>
+   </script>
 </body>
 </html>
