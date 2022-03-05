@@ -1,221 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >HAPPY-2001</title>
-    <link rel="icon" href="./Ava.jpeg">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/themify-icons/themify-icons.css">
-</head>
-<body>
-    <div id="main">
-        <div id="header">
-            <ul id="nav">
-                <li><a href="">HOME</a></li>
-                <li><a href="#content">BAND</a></li>
-                <li><a href="#booking">TOUR</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <li >
-                    <a href="#">MORE
-                        <i class="icon-down ti-angle-down"></i>
-                    </a>
-                    <ul class="subnav">
-                        <li><a href="#">Merchandise</a></li>
-                        <li><a href="#">Extras</a></li>
-                        <li><a href="#">Media</a></li>
-                    </ul>
-                </li>
-                <li><a href="#slider" >MERCH</a></li>
-            </ul>
-            <div id="icon-search">
-                <i class="icon-ti-search ti-search"></i>
-            </div>
-            <div id="icon-menu">
-                <i class="ti-menu"></i>
-            </div>
-        </div>
+<html lang="vi" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Chúc mừng 8/3</title>
+		<link rel="shortcut icon" href="./rose.png">
+		<link rel="stylesheet" href="https://use.typekit.net/eqx3jwb.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<script>document.documentElement.className = "js";
 
-        <div id="slider" style="background: url(./chicago.jpg) top center / cover no-repeat;">
-            <div id="text-content">
-                <h2>Chicago</h2>
-                <p>Thank you, Chicago - A night we won't forget</p>
-            </div>
-        </div>
+var supportsCssVars = function supportsCssVars() {
+  var e,
+      t = document.createElement("style");
+  return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+};
 
-        <div id="content">
-            <div class="head-content">
-                <h2>THE BAND</h2>
-                <p>We love music</p>
-            </div>
-            <div id="main-content">
-                We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-            <div id="img-content">
-               <div class="member-item">
-                   <p>Name</p>
-                   <img src="./bandmember.jpg" alt="">
-               </div>
-               <div class="member-item">
-                    <p>Name</p>
-                    <img src="./bandmember.jpg" alt="">
-               </div>
-               <div class="member-item">
-                    <p>Name</p>
-                    <img src="./bandmember.jpg" alt="">
-               </div>
-            </div>
-        </div>
-        <div id="booking">
-            <div id="main-booking">
-                <div class="head-content">
-                    <h2 class="text-white">TOUR DATES</h2>
-                    <p class="text-white">Remember to book your tickets!</p>
-                </div>
-                <div class="tickets">
-                    <ul>
-                        <li class="text-tickets">September <span class="sold-out text-white">Sold out</span></li>
-                        <li class="text-tickets">October <span class="sold-out text-white">Sold out</span></li>
-                        <li class="text-tickets">November <span class="quantity text-white">3</span></li>
-                    </ul>
-                </div>
-                <div id="img-tickets">
-                    <div class="tickets1">
-                        <img src="./newyork.jpg" alt="">
-                        <div class="text-img">
-                            <p class="first-text">New York</p>
-                            <p class="second-text">Fri 27 Nov 2016</p>
-                            <p class="third-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="buy-tickets text-white js-buy-ticket">Buy Tickets</button>
-                        </div>
-                    </div>
-                    <div class="tickets1">
-                        <img src="./paris.jpg" alt="">
-                        <div class="text-img">
-                            <p class="first-text">Paris</p>
-                            <p class="second-text">Sat 28 Nov 2016</p>
-                            <p class="third-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="buy-tickets text-white js-buy-ticket">Buy Tickets</button>
-                        </div>
-                    </div>
-                    <div class="tickets1">
-                        <img src="./sanfran.jpg" alt="">
-                        <div class="text-img">
-                            <p class="first-text">San Francisco</p>
-                            <p class="second-text">Sun 29 Nov 2016</p>
-                            <p class="third-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <button class="buy-tickets text-white js-buy-ticket">Buy Tickets</button>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-        <div id="contact">
-            <div class="head-content">
-                <h2 >CONTACT</h2>
-                <p >Fan? Drop a note!</p>
-            </div>
-            <div class="contact-main">
-                <div class="call">
-                    <p><i class="ti-location-pin">  Chicago, US</i></p>
-                    <p><i class="ti-mobile">  Phone: <a href="tel:+84359113593">0359113593</a></i></p>
-                    <p><i class="ti-email">  Email: <a href="mailto:thachdp2808@gmail.com">thachdp2808@gmail.com</a></i></p>
-                </div>
-                <div class="input-contact">
-                    <form action="">
-                        <div class="row">
-                            <div class="half">
-                                <input type="text" placeholder="Name" required class="input">
-                            </div>
-                            <div class="half1">
-                                <input type="email" placeholder="Email" required class="input">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <input type="text" placeholder="Message" required class="input">
-                        </div>
-                        <div class="send-contact">
-                            <input type="submit" value="SEND">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        
-        <div class="modal js-modal">
-            <div class="modal-box">
-                <div class="modal-close js-close">
-                    <i class="ti-close"></i>
-                </div>
-                <div class="modal-head">
-                    <i class="ti-briefcase">
-                        Tickets
-                    </i>
-                    
-                </div>
-                <div class="modal-body">
-                    <label for="" class="modal-label">
-                        <i class="ti-shopping-cart">
-                            Tickets, $15 per person
-                        </i>
-                    </label>
-                    <input type="text" class="body-input" placeholder="How many?">
-                    <label for="" class="modal-label">
-                        <i class="ti-user">
-                            Send To</i>
-                        </label>
-                        <input type="text" class="input-body" placeholder="Enter email">
-                    <button id="buy-ticket">
-                        PAY <i class="ti-check"></i>
-                    </button>
-                </div>
-                <div class="modal-foot">
-                   <p class="need-foot">Need <a href="">help?</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="map-section">
-            <img src="./map.jpg" alt="Map">
-        </div>
-        <div id="footer">
-            <div id="icon-social">
-                <a href=""><i class="ti-facebook"></i></a>
-                <a href=""><i class="ti-instagram"></i></a>
-                <a href=""><i class="ti-youtube"></i></a>
-                <a href=""><i class="ti-pinterest"></i></a>
-                <a href=""><i class="ti-twitter-alt"></i></a>
-                <a href=""><i class="ti-linkedin"></i></a>
-            </div>
-            <p class="text-footer">Powered by <a href="">w3.css</a> </p>
-        </div>
-
-    </div>
-   <script src="./assets/css/Script/mycode.js"></script>
-   <script>
-       var header = document.getElementById('header');
-       var mobileMenu = document.getElementById('icon-menu');
-        var headerclient = header.clientHeight;
-        mobileMenu.onclick = function(){
-            var isClose = header.clientHeight === headerclient;
-            if(isClose){
-                header.style.height = 'auto'
-            }else{
-                header.style.height = '46px'
-            }
-        }
-
-        //Tự động đóng khi chọn menu
-        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-        for(i=0;i<menuItems.length;i++){
-            var menuItem = menuItems[i];
-
-            menuItem.onclick = function(){
-                header.style.height = '46px';
-            }
-        }
-   </script>
-</body>
+supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="demo-1 loading">
+		<main>
+			<div class="message">Please view this demo on a desktop to see the effect.</div>
+			<div class="frame">
+			</div>
+			<div class="content">
+				<div class="grid">
+					<div class="grid__item pos-2"><div class="grid__item-img" style="background-image:url(./img/img8.png);" class="hover" ></div></div>
+					<div class="grid__item pos-3"><div class="grid__item-img" style="background-image:url(./img/img6.png);" class="hover"></div></div>
+					<div class="grid__item pos-4"><div class="grid__item-img" style="background-image:url(./img/img5.png);" class="hover"></div></div>
+					<div class="grid__item pos-1"><div class="grid__item-img" style="background-image:url(./img/img3.png);" class="hover"></div></div>
+					<div class="grid__item pos-5"><div class="grid__item-img" style="background-image:url(./img/img1.png);" class="hover"></div></div>
+					<div class="grid__item pos-6"><div class="grid__item-img" style="background-image:url(./img/img4.png);" class="hover"></div></div>
+					<div class="grid__item pos-7"><div class="grid__item-img" style="background-image:url(./img/img7.png);" class="hover"></div></div>
+					<div class="grid__item pos-8"><div class="grid__item-img" style="background-image:url(./img/img2.png);" class="hover"></div></div>
+					<div class="grid__item pos-9"><div class="grid__item-img" style="background-image:url(./img/img7.png);" class="hover"></div></div>
+					
+				</div>
+                <h2 class="content__title no-select">
+					<span>Lovely</span>
+				</h2>
+				<h2 class="content__title no-select">
+					<span class="content__title-sub">Chúc bạn 8/3 xinh đẹp hơn nữa nhá</span>
+				</h2>
+			</div>
+		</main>
+        <svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
+			<circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
+		</svg>
+		<script src="./script.js"></script>
+	</body>
 </html>
